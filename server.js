@@ -8,6 +8,9 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+// We are using a free version of Heroku, so since the server has a SSL certificate we should avoid rejecting UNAUTHORIZED calls from the client
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 const db = knex({
   client: 'pg',
   connection: {
