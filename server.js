@@ -36,7 +36,7 @@ app.put('/image', (req, res) => {
   image.handleImage(req, res, db);
 });
 app.post('/imageurl', (req, res) => {
-  image.handleApiCall(req, res3);
+  image.handleApiCall(req, res);
 });
 
 const PORT = process.env.PORT || 3000;
